@@ -3,8 +3,9 @@
   pkgs,
   nixgl,
   ...
-}: {
-  imports = [./neovim];
+}:
+{
+  imports = [ ./neovim ];
   home.sessionPath = [
     "$HOME/.local/bin"
     "$HOME/.cargo/bin"
@@ -27,6 +28,8 @@
     pkg-config
   ];
 
+  programs.bat.enable = true;
+
   programs.zellij = {
     enable = true;
     enableZshIntegration = true;
@@ -48,13 +51,14 @@
     history.share = true;
     oh-my-zsh = {
       enable = true;
-      plugins = ["git"];
+      plugins = [ "git" ];
       theme = "robbyrussell";
     };
     shellAliases = {
       "ll" = "ls -l";
       "la" = "ls -la";
       ".." = "cd ..";
+      "cat" = "bat";
     };
   };
 

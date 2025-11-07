@@ -1,5 +1,3 @@
-local lspconfig = require("lspconfig")
-
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 vim.lsp.enable("nil_ls")
@@ -28,7 +26,7 @@ vim.g.rustaceanvim = {
 		default_settings = {
 			-- rust-analyzer language server configuration
 			["rust-analyzer"] = {
-				check = { command = "check" },
+				check = { command = "clippy" },
 				cargo = { targetDir = true },
 			},
 		},
