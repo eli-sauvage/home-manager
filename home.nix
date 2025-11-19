@@ -15,7 +15,7 @@
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
     nerd-fonts.ubuntu-mono
-    du-dust
+    dust
     jq
     ripgrep
     unzip

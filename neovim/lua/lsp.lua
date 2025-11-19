@@ -1,9 +1,6 @@
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
+-- local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 vim.lsp.enable("nil_ls")
-vim.lsp.config("nil_ls", {
-	capabilities = capabilities,
-})
 
 --[[ lspconfig.rust_analyzer.setup({ 
     capabilities = capabilities, 
@@ -38,7 +35,6 @@ vim.g.rustaceanvim = {
 vim.g.rustfmt_autosave = 1
 
 vim.lsp.enable("ts_ls")
-vim.lsp.config("ts_ls", { capabilities = capabilities })
 --[[ vim.lsp.enable("denols")
 vim.lsp.config("denols", {
 	capabilities = capabilities,
@@ -46,7 +42,6 @@ vim.lsp.config("denols", {
 }) ]]
 
 vim.lsp.enable("pyright")
-vim.lsp.config("pyright", { capabilities = capabilities })
 
 require("lspsaga").setup({})
 
