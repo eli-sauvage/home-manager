@@ -21,6 +21,7 @@
     unzip
     trash-cli
     lazygit
+    lazydocker
     htop
     nodejs_20
     gcc
@@ -59,6 +60,7 @@
       "la" = "ls -la";
       ".." = "cd ..";
       "cat" = "bat";
+      "lz" = "lazygit";
     };
   };
 
@@ -112,6 +114,10 @@
       identityFile = "${config.home.homeDirectory}/.ssh/id_rsa";
       port = 443;
     };
+  };
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
   };
 
   home.sessionVariables = {
